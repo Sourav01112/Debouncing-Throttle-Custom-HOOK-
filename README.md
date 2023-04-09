@@ -2,8 +2,6 @@
 
 ![Getting Started](./Skeleton.png)
 
-
-
 --> App.jsx:
 
 App.jsx is a functional React component that renders an input element, as well as two custom components named Debounced and Throttled. The useState hook is used to create two state variables, input and globalData. The useFetch hook is used to make a network request to retrieve data from an API endpoint.
@@ -48,8 +46,6 @@ The useEffect also returns a cleanup function that clears the timeout ID stored 
 Finally, the hook returns an object with a single property, debouncedVal, which holds the debounced input value. This value can be accessed by the parent component that calls this hook.
 To use this hook, you would need to import the useEffect, useState, and useRef hooks from the react module. You would then call the useDebounce hook in the parent component and pass in the input value and the optional delay value. The hook will return an object with the debounced input value that can be used within the parent component.
 
-
-
 --> useThrottle.js: 
 
 The useThrottle custom hook is used to throttle user input updates. It takes an input and a delay as arguments, and returns a state value called throttleVal. The throttleVal is the input value, but it is updated only after a certain amount of time has elapsed since the last update.
@@ -58,3 +54,4 @@ Inside the useEffect hook, the throttleID.current variable is checked to determi
 When the timer expires, the setThrottleVal function is called with the current input value as its argument. This updates the throttleVal state variable with the latest input value after the specified delay has elapsed since the last update.
 Finally, the useThrottle hook returns an object with the throttleVal state value. This value can be used by the parent component to render the updated input value after throttling.
 
+![Getting Started](./debouncedPNG.png)
